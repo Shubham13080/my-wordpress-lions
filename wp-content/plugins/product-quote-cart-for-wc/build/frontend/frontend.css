@@ -1,0 +1,251 @@
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src-frontend/frontend.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.floating-cart-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--gm-btn-color, #0073aa);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 100000002;
+  transition: background-color 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+.floating-cart-button:hover {
+  background-color: var(--gm-hover-btn-color, #c5303a);
+  color: var(--gm-hover-btn-text-color, #e63946);
+}
+
+.floating-cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.floating-cart-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: 1002;
+  padding: 20px;
+}
+.floating-cart-panel .floating-cart-panel-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .floating-cart-panel .floating-cart-panel-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.floating-cart-panel.open {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.cart-content {
+  flex: 1;
+  padding-right: 0;
+}
+.cart-content .gmpqcw-cart-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+.cart-content .gmpqcw-cart-card img.gmpqcw-cart-img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 12px;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+.cart-content .gmpqcw-cart-card .gmpqcw-cart-info h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+.cart-content .gmpqcw-cart-card .gmpqcw-remove-btn {
+  background-color: var(--gm-btn-color, #0073aa);
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cart-content .gmpqcw-cart-card .gmpqcw-remove-btn:hover {
+  background-color: var(--gm-hover-btn-color, #c5303a);
+  color: var(--gm-hover-btn-text-color, #e63946);
+}
+
+.gmpqcw-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.gmpqcw-form .gmpqcw-form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--gm-btn-color, #0073aa);
+}
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-input,
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-textarea,
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-select {
+  padding: 10px;
+  border: 1px solid var(--gm-btn-color, #0073aa);
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-input:focus,
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-textarea:focus,
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-select:focus {
+  outline: none;
+}
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-radio-container,
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--gm-btn-color, #0073aa);
+}
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-radio-container input,
+.gmpqcw-form .gmpqcw-form-group .gmpqcw-checkbox-container input {
+  margin-right: 8px;
+}
+.gmpqcw-form .gmpqcw-submit-btn {
+  background-color: var(--gm-btn-color, #0073aa);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.gmpqcw-form .gmpqcw-submit-btn:hover {
+  background-color: var(--gm-hover-btn-color, #c5303a);
+  color: var(--gm-hover-btn-text-color, #e63946);
+}
+
+.gmpqcw_inquirybtn .gmpqcw_inq_addtocart {
+  background-color: var(--gm-btn-color, #0073aa);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+  margin: 10px 0px !important;
+}
+.gmpqcw_inquirybtn .gmpqcw_inq_addtocart:hover {
+  background-color: var(--gm-hover-btn-color, #c5303a);
+  color: var(--gm-hover-btn-text-color, #e63946);
+}
+
+.gmpqcw-success {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: var(--gm-btn-color, #0073aa);
+  border: 1px solid var(--gm-btn-color, #0073aa);
+  color: var(--gm-btn-text-color, #ccc);
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.gmpqcw-error {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: var(--gm-btn-color, #0073aa);
+  border: 1px solid var(--gm-btn-color, #0073aa);
+  color: var(--gm-btn-text-color, #ccc);
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: color 0.3s ease;
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.close-button:before {
+  content: "×";
+  font-size: 24px;
+  color: #333;
+  display: inline-block;
+  line-height: 1;
+}
+.close-button:hover {
+  color: #e63946;
+}
+.close-button:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=frontend.css.map*/
